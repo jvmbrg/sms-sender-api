@@ -1,7 +1,11 @@
 package dev.jvmbrg.smssender.config;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Configuration;
 
+//Classe de configuração do Twilio, onde os tokens de acessos são passados por parametro para os atributos 
+//da classe, extraidos do arquivo yml. A notação @Configuration serve para identificar a classe como classe de configuração
+@Configuration
 public class TwilioConfiguration {
 	private final String accountSid;
 	private final String authToken;
