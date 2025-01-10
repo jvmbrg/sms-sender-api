@@ -11,14 +11,12 @@ public class TwilioConfiguration {
 	private final String authToken;
 	private final String trialNumber;
 	
-	public TwilioConfiguration(
-			@Value("${twilio.account_sid}")String accountSid, 
-			@Value("${twilio.auth_token}")String authToken, 
-			@Value("${twilio.trial_number}")String trialNumber) {
-		
+	public TwilioConfiguration(@Value("${twilio.account_sid}")String accountSid, 
+							   @Value("${twilio.auth_token}")String authToken, 
+							   @Value("${twilio.trial_number}")String trialNumber) {
 		this.accountSid = accountSid;
 		this.authToken = authToken;
-		this.trialNumber = trialNumber;	
+		this.trialNumber = trialNumber;
 	}
 
 	public String getAccountSid() {
@@ -32,6 +30,9 @@ public class TwilioConfiguration {
 	public String getTrialNumber() {
 		return trialNumber;
 	}
+	
+	
+	
 	
 	
 

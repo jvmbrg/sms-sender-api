@@ -20,10 +20,8 @@ public class SmsSenderController {
 		this.smsSender = smsSender;
 	}
 	
-	@PostMapping(value = "/send-sms")
+	@PostMapping("/send-sms")
 	public void sendSms(@RequestBody SmsRequest smsRequest) {
-		
-
+		smsSender.sendSms(smsRequest);
 	}
-	
 }
